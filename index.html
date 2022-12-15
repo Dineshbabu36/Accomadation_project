@@ -12,10 +12,10 @@
 
 <body>
     <div class="main">
+        <!--------navbar start ----------------->
         <nav class="navbar">
-            <div class="brand-title">Brand Name</div>
+            <div class="brand-title">Portfolio</div>
             <div class="toggle-button">
-
                 <div class="solid"></div>
                 <div class="solid"></div>
                 <div class="solid"></div>
@@ -24,79 +24,153 @@
                 <ul>
                     <li><button class="loginbtn" onclick="home()">HOME</button></li>
                     <li><button class="loginbtn" onclick="skill()">SKILL</button></li>
-                    <li><button class="loginbtn" onclick="contact()">CONTACT</button></li>
-                    <li><button class="loginbtn" onclick="education()">EDUCATION</button></li>
                     <li><button class="loginbtn" onclick="achivement()">ACHIEVEMENTS</button></li>
+                    <li><button class="loginbtn" onclick="contact()">ABOUT</button></li>
+                    <li><button class="loginbtn" onclick="education()">CONTACT</button></li>
                     <li><button class="loginbtn" onclick="logins()">LOGIN</button></li>
                 </ul>
             </div>
         </nav>
-
-        <div class="content">
-
-            <div id="home" class="form-box form-boxhome ">
-                <h1>Welcome to webpage</h1>
-                <p>
-                    We have created some responsive W3.CSS website templates for you to use. You are free to modify, save, share, and use them in all your projects.
-                </p>
-            </div>
-            <div id="skill" class="form-box form-boxhome ">
-                <h1>Skills </h1>
-                <p>
-                    We have created some responsive W3.CSS website templates for you to use. You are free to modify, save, share, and use them in all your projects.
-                </p>
-            </div>
-            <div id="contact" class="form-box form-boxhome ">
-                <h1>Contact Info</h1>
-                <p>
-                    We have created some responsive W3.CSS website templates for you to use. You are free to modify, save, share, and use them in all your projects.
-                </p>
-            </div>
-            <div id="education" class="form-box form-boxhome ">
-                <h1>Education</h1>
-                <p>
-                    We have created some responsive W3.CSS website templates for you to use. You are free to modify, save, share, and use them in all your projects.
-                </p>
-            </div>
-            <div id="achivement" class="form-box form-boxhome ">
-                <h1>Achivements</h1>
-                <p>
-                    We have created some responsive W3.CSS website templates for you to use. You are free to modify, save, share, and use them in all your projects.
-                </p>
-            </div>
-            <div id='login-form' class='login-page'>
-                <div class="form-box">
-
-                    <div class='button-box'>
-                        <div id='btn'></div>
-                        <button type='button' onclick='login()' class='toggle-btn'>Log In</button>
-                        <button type='button' onclick='register()' class='toggle-btn'>Register</button>
-                    </div>
-                    <form id='login' class='input-group-login'>
-                        <input type='text' class='input-field' placeholder='Email Id' required>
-                        <input type='password' class='input-field' placeholder='Enter Password' required>
-                        <input type='checkbox' class='check-box'><span>Remember Password</span>
-                        <button type='submit' class='submit-btn'>Log in</button>
-                    </form>
-                    <form id='register' class='input-group-register'>
-                        <input type='text' class='input-field' placeholder='First Name' required>
-                        <input type='text' class='input-field' placeholder='Last Name ' required>
-                        <input type='email' class='input-field' placeholder='Email Id' required>
-                        <input type='password' class='input-field' placeholder='Enter Password' required>
-                        <input type='password' class='input-field' placeholder='Confirm Password' required>
-                        <input type='checkbox' class='check-box'><span>I agree to the terms and conditions</span>
-                        <button type='submit' class='submit-btn'>Register</button>
-                    </form>
+        <!---------homepage------------>
+        <div id="home" class="form-box form-boxhome homepage">
+            <div class="homeview">
+                <div class="hometext">
+                    <h1>I'M <span>DINESH BABU</span></h1>
+                    <p class="hometext-title">SOFTWARE DEVELOPER</p>
+                    <p class="hometext-para">
+                        To become a successful professional in the field of Information Technology by utilizing my skills and enable further personal and professional development and work towards the prosperity of the organization.
+                    </p>
+                    <button class="download"><a href="./resume.pdf" download="dineshbabu_resume.pdf">Download CV</a></button>
+                </div>
+                <div class="homeimg">
+                    <img src="img_2.jpg" alt="">
                 </div>
             </div>
         </div>
-    </div>
-    <!-- <section>
-        <div class="home1" id="ho">
-            this is my website created by dinesh
+        <!----------------skillpage-------->
+        <div id="skill" class="form-box  skillpage">
+            <h1>Skills </h1>
+            <div class="skills">
+                <div class="skill-card">
+                    HTML
+                </div>
+                <div class="skill-card">
+                    CSS
+                </div>
+                <div class="skill-card">
+                    JAVASCRIPT
+                </div>
+                <div class="skill-card">
+                    PYTHON
+                </div>
+            </div>
         </div>
-    </section> -->
+        <!--------aboutpage------->
+        <div id="about" class="form-box  aboutpage">
+            <h1>About me</h1>
+            <div class="about">
+                <table cellspacing="30">
+                    <tr class="about-tr">
+                        <th>Email: </th>
+                        <td>murugandinesh350@gmail.com</td>
+                    </tr>
 
+                    <tr class="about-tr">
+                        <th>Mobile number: </th>
+                        <td>9943865665</td>
+                    </tr>
+                    <tr class="about-tr">
+                        <th>Address: </th>
+                        <td>No 1, Thirumalai nagar, 2nd street, Tiruppur </td>
+                    </tr>
+                    <tr class="about-tr">
+                        <th>linkedin: </th>
+                        <td>
+                            <a href="https://bit.ly/3qw4yRK" target="_blank">https://bit.ly/3qw4yRK</a>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+        <!---------contact page------->
+        <div id="contact" class="form-box form-boxhome contactpage ">
+            <h1>Contact</h1>
+
+            <div class="container">
+                <form action="https://formsubmit.co/c25ce08a551d3c6b80921cc1b0032ad4" method="POST">
+                    <div class="contact-row">
+                        <div class="col-25">
+                            <label for="fname">Name</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" class="contact-form" id="fname" name="firstname" placeholder="Your name..">
+                        </div>
+                    </div>
+                    <div class="contact-row">
+                        <div class="col-25">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="email" class="contact-form" id="email" name="email" placeholder="email">
+                        </div>
+                    </div>
+                    <div class="contact-row">
+                        <div class="col-25">
+                            <label for="subject">Subject</label>
+                        </div>
+                        <div class="col-75">
+                            <textarea id="subject" name="subject" class="contact-form" placeholder="Write something.." style="height:200px"></textarea>
+                        </div>
+                    </div>
+                    <div class="contact-row">
+                        <button type="submit" class="contact-submit">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-----------achivement page------->
+        <div id="achivement" class="form-box form-boxhome achivementpage">
+            <h1>Achivements</h1>
+            <div class="achivement">
+                <div class="achivement-card">
+                    <h2>Internship</h2>
+
+                    <p class="achive-para">Created front end page using html, css, bootstrap and javascript with responsiveness. Implemented backend service like CRUD operations in website using PHP.</p>
+                </div>
+                <div class="achivement-card">
+                    <h2>Projects</h2>
+                    <p class="achive-para">perform Management system. It manages all the information about student. The project is totally built at administrative end using Django framework .</p>
+                </div>
+            </div>
+        </div>
+        <!----------login page --------->
+        <div id='login-form' class='login-page'>
+            <div class="login-form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                    <button type='button' onclick='login()' class='toggle-btn'>Log In</button>
+                    <button type='button' onclick='register()' class='toggle-btn'>Register</button>
+                </div>
+                <form id='login' class='input-group-login'>
+                    <input type='text' class='input-field' placeholder='Email Id' required>
+                    <input type='password' class='input-field' placeholder='Enter Password' required>
+                    <input type='checkbox' class='check-box'><span class="checkbox-text">Remember Password</span>
+                    <button type='submit' class='submit-btn'>Log in</button>
+                </form>
+                <form id='register' class='input-group-register'>
+                    <input type='text' class='input-field' placeholder='First Name' required>
+                    <input type='text' class='input-field' placeholder='Last Name ' required>
+                    <input type='email' class='input-field' placeholder='Email Id' required>
+                    <input type='password' class='input-field' placeholder='Enter Password' required>
+                    <input type='password' class='input-field' placeholder='Confirm Password' required>
+                    <input type='checkbox' class='check-box'><span class="checkbox-text">I agree to the terms and conditions</span>
+                    <button type='submit' class='submit-btn'>Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
     <script src="func.js"></script>
 </body>
 
