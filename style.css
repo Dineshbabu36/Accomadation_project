@@ -13,6 +13,9 @@ a {
     text-decoration: none;
 }
 
+
+/* ---------main in add background image-------- */
+
 .main {
     width: 100%;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%), url(img_1.jpg);
@@ -21,48 +24,35 @@ a {
     height: 109vh;
 }
 
-.navbars {
-    width: 1200px;
-    height: 75px;
-    margin: auto;
+
+/*---------------navbar------------- */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    height: 6rem;
+    color: white;
+    padding-right: 30px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%);
 }
 
-.icon {
-    width: 200px;
-    float: left;
-    height: 70px;
-}
-
-.logo {
-    color: #ff7200;
-    font-size: 35px;
-    font-family: Arial;
-    padding-left: 20px;
-    float: left;
-    padding-top: 10px;
-}
-
-.menu {
-    width: 400px;
-    float: left;
-    height: 70px;
-}
-
-ul {
+.navbar-links ul {
     float: left;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-ul li {
+.navbar-links ul li {
     list-style: none;
     margin-left: 62px;
     margin-top: 27px;
     font-size: 14px;
 }
 
-ul li a {
+.navbar-links ul li a {
     text-decoration: none;
     color: #fff;
     font-family: Arial;
@@ -70,8 +60,72 @@ ul li a {
     transition: 0.4s ease-in-out;
 }
 
-ul li a:hover {
+.navbar-links ul li a:hover {
     color: #ff7200;
+}
+
+.brand-title {
+    font-size: 2.5rem;
+    margin: .5rem;
+    color: #00ff04;
+}
+
+
+/* ------------toggle-button------------- */
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+}
+
+
+/* ------------media query for navbar--------------- */
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-right: 0;
+    }
+    .toggle-button {
+        display: flex;
+    }
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+    .navbar-links ul li {
+        text-align: center;
+    }
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+    .navbar-links.active {
+        display: flex;
+        z-index: 100000;
+        background-color: #978c8c;
+        padding-bottom: 1rem;
+    }
+}
+
+
+/*---------solid class is use create a toggle button--------- */
+
+.solid {
+    height: 3px;
+    width: 100%;
+    background-color: white;
 }
 
 .loginbtn {
@@ -89,69 +143,309 @@ ul li a:hover {
     color: #ff7200;
 }
 
-#login-form {
-    display: none;
-}
 
-.search {
-    width: 330px;
-    float: left;
-    margin-left: 270px;
-}
-
-.srch {
-    font-family: 'Times New Roman';
-    width: 200px;
-    height: 40px;
-    background: transparent;
-    border: 1px solid #ff7200;
-    margin-top: 13px;
-    color: #fff;
-    border-right: none;
-    font-size: 16px;
-    float: left;
-    padding: 10px;
-    border-bottom-left-radius: 5px;
-    border-top-left-radius: 5px;
-}
-
-.srch:focus {
-    outline: none;
-}
+/* --------- common class adding background----- */
 
 .form-box {
-    width: 380px;
-    height: 480px;
-    position: absolute;
-    margin: 2% auto;
     background: rgba(0, 0, 0, 0.3);
     padding: 10px;
     overflow: hidden;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 5% auto;
 }
 
 .form-boxhome {
     width: 100% !important;
-    display: none;
 }
 
-.content h1,
-p {
-    text-align: center;
-    color: white;
-}
 
-#home h1,
-p {
-    text-align: center;
-    color: white;
+/* --------homepage----------- */
+
+.homepage {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 6rem);
 }
 
 .hometext {
-    text-align: center;
+    display: flex;
     color: white;
+    width: 50%;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: center;
+}
+
+.hometext h1 {
+    margin-bottom: 1rem;
+    color: #ff7200;
+}
+
+.hometext span {
+    margin-bottom: 1rem;
+    font-size: 32px;
+    color: whitesmoke;
+}
+
+.hometext-title {
+    display: flex;
+    margin-bottom: 1rem;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.hometext-para {
+    display: flex;
+    margin-bottom: 1rem;
+    font-size: 14px;
+    color: #fcfc;
+}
+
+.download {
+    text-align: center;
+    display: block;
+    padding: inherit;
+    width: 10rem;
+    height: 56px;
+    margin-bottom: 1rem;
+    font-size: 16px;
+    font-weight: bold;
+    color: #426bff;
+    background-color: #f9004d;
+    border-radius: 30px;
+}
+
+.download:hover {
+    background-color: #426bff;
+}
+
+.homeview {
+    display: flex;
+}
+
+.homeimg {
+    display: flex;
+    width: 50%;
+    align-items: center;
+}
+
+.homeimg img {
+    height: 300px;
+    border-radius: 3px;
+}
+
+@media screen and (max-width: 592px) {
+    .homeview {
+        flex-direction: column;
+    }
+    .homeimg {
+        width: 100%;
+    }
+    .homeimg img {
+        min-height: 300px;
+    }
+}
+
+
+/* ---------skill page ------------ */
+
+.skillpage h1 {
+    margin-bottom: 2rem;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.skills {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 3rem;
+    margin-bottom: 5rem;
+}
+
+.skill-card {
+    color: black;
+    padding: 2rem;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.skill-card:hover {
+    background-color: aqua;
+    transform: scale(1.3);
+    z-index: 2;
+}
+
+
+/* -----------about page------------ */
+
+.about {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    border-radius: 5px;
+    margin-top: 5rem;
+    padding: 20px;
+    width: 75%;
+    margin: auto;
+}
+
+.aboutpage h1 {
+    text-align: center;
+    color: whitesmoke;
+    margin-bottom: 3rem;
+}
+
+.about-tr {
+    color: whitesmoke;
+}
+
+
+/* ------contact form-------- */
+
+.contactpage h1 {
+    justify-content: center;
+    color: whitesmoke;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact-form {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+.contact-submit {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+.contact-submit:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 75%;
+    margin: auto;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+.contact-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .col-25,
+    .col-75,
+    .contact-submit {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+
+/* ----------achivementpage---------- */
+
+.achivement {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+.achivement-card {
+    display: inline-block;
+    color: black;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+    padding: 60px;
+    transition: .5s;
+    background-color: #426bff;
+}
+
+.achivement-card h2 {
+    display: flex;
+    width: 100%;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.achivementpage h1 {
+    width: 100%;
+    color: whitesmoke;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.achive-para {
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 1.4;
+    letter-spacing: 1.4px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+
+/* ----------login page--------- */
+
+#login-form {
+    display: none;
+}
+
+.login-form-box {
+    width: 380px;
+    height: 480px;
+    position: relative;
+    margin: 2% auto;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    overflow: hidden;
 }
 
 .button-box {
@@ -165,9 +459,9 @@ p {
 .toggle-btn {
     padding: 10px 30px;
     cursor: pointer;
+    color: white;
     background: transparent;
     border: 0;
-    color: white;
     outline: none;
     position: relative;
 }
@@ -178,7 +472,7 @@ p {
     position: absolute;
     width: 110px;
     height: 100%;
-    background: #ff7200;
+    background: #04ec00;
     border-radius: 30px;
     transition: .5s;
 }
@@ -215,8 +509,8 @@ p {
     cursor: pointer;
     display: block;
     margin: auto;
-    background: #426bff;
     color: white;
+    background: #1726c0;
     border: 0;
     outline: none;
     border-radius: 30px;
@@ -226,8 +520,8 @@ p {
     margin: 30px 10px 34px 0;
 }
 
-span {
-    color: #777;
+.checkbox-text {
+    color: #fff8f8;
     font-size: 12px;
     bottom: 68px;
     position: absolute;
@@ -249,89 +543,4 @@ span {
 #register input {
     color: white;
     font-size: 15;
-}
-
-.navbar {
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-    align-items: center;
-    background: transparent;
-    color: white;
-    padding-right: 30px;
-}
-
-.brand-title {
-    font-size: 1.5rem;
-    margin: .5rem;
-}
-
-.navbar-links {
-    height: 100%;
-}
-
-.navbar-links ul {
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar-links li {
-    list-style: none;
-}
-
-.navbar-links li a {
-    display: block;
-    text-decoration: none;
-    color: white;
-    padding: 1rem;
-}
-
-.navbar-links li:hover {
-    background-color: #555;
-}
-
-.toggle-button {
-    position: absolute;
-    top: .75rem;
-    right: 1rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-    cursor: pointer;
-}
-
-@media (max-width: 800px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .toggle-button {
-        display: flex;
-    }
-    .navbar-links {
-        display: none;
-        width: 100%;
-    }
-    .navbar-links ul {
-        width: 100%;
-        flex-direction: column;
-    }
-    .navbar-links ul li {
-        text-align: center;
-    }
-    .navbar-links ul li a {
-        padding: .5rem 1rem;
-    }
-    .navbar-links.active {
-        display: flex;
-    }
-}
-
-.solid {
-    height: 3px;
-    width: 100%;
-    background-color: white;
 }
