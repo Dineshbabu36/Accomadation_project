@@ -8,16 +8,16 @@ toggleButton.addEventListener('click', () => {
 var loginLink = document.getElementById('login-form');
 var homeLink = document.getElementById('home');
 var skillLink = document.getElementById('skill');
+var aboutLink = document.getElementById('about');
 var contactLink = document.getElementById('contact');
-var educationLink = document.getElementById('education');
 var achivementLink = document.getElementById('achivement');
 
 function home() {
     homeLink.style.display = 'block';
     loginLink.style.display = 'none';
     skillLink.style.display = 'none';
+    aboutLink.style.display = 'none';
     contactLink.style.display = 'none';
-    educationLink.style.display = 'none';
     achivementLink.style.display = 'none';
 
 }
@@ -26,8 +26,8 @@ function skill() {
     homeLink.style.display = 'none';
     loginLink.style.display = 'none';
     skillLink.style.display = 'block';
+    aboutLink.style.display = 'none';
     contactLink.style.display = 'none';
-    educationLink.style.display = 'none';
     achivementLink.style.display = 'none';
 }
 
@@ -35,8 +35,8 @@ function contact() {
     homeLink.style.display = 'none';
     loginLink.style.display = 'none';
     skillLink.style.display = 'none';
-    contactLink.style.display = 'block';
-    educationLink.style.display = 'none';
+    aboutLink.style.display = 'block';
+    contactLink.style.display = 'none';
     achivementLink.style.display = 'none';
 }
 
@@ -44,8 +44,8 @@ function education() {
     homeLink.style.display = 'none';
     loginLink.style.display = 'none';
     skillLink.style.display = 'none';
-    contactLink.style.display = 'none';
-    educationLink.style.display = 'block';
+    aboutLink.style.display = 'none';
+    contactLink.style.display = 'block';
     achivementLink.style.display = 'none';
 }
 
@@ -53,8 +53,8 @@ function achivement() {
     homeLink.style.display = 'none';
     loginLink.style.display = 'none';
     skillLink.style.display = 'none';
+    aboutLink.style.display = 'none';
     contactLink.style.display = 'none';
-    educationLink.style.display = 'none';
     achivementLink.style.display = 'block';
 }
 
@@ -62,8 +62,8 @@ function logins() {
     homeLink.style.display = 'none';
     loginLink.style.display = 'block';
     skillLink.style.display = 'none';
+    aboutLink.style.display = 'none';
     contactLink.style.display = 'none';
-    educationLink.style.display = 'none';
     achivementLink.style.display = 'none';
 }
 
@@ -83,10 +83,9 @@ function login() {
     z.style.left = '0px';
 }
 
-var modal = document.getElementById('login-form');
+//hide login page when outside click
 window.onclick = function(event) {
-    console.log('event is ', event);
-    if (event.target == modal) {
-        modal.style.display = "none";
+    if (event.target == loginLink) {
+        loginLink.style.display = "none";
     }
 }
